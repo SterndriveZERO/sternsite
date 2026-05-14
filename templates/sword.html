@@ -1,15 +1,39 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sword PvP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
-{% block content %}
+<body>
 
-<h1>Sword PvP Guide</h1>
+<header>
+  <h1>⚔️ Sword PvP Hub</h1>
+  <div class="header-actions">
+    {% include 'partials/top_nav.html' %}
+  </div>
+</header>
 
-<p>
-- Aim timing  
-- Strafing  
-- W-tapping  
-</p>
+<div class="container sword-hub">
 
-<a class="button" href="/pvp">Back</a>
+  <div class="grid sword-hub-grid">
 
-{% endblock %}
+    <a class="card" href="/sword/basic">🔰 Basic Knowledge</a>
+    <a class="card" href="/sword/intro">🥊 Techniques Intro</a>
+    <a class="card" href="/sword/core">🔊 Core Techniques</a>
+    <a class="card" href="/sword/intermediate">🔊 Intermediate Techniques</a>
+    <a class="card" href="/sword/combo">🤖 Combo Set-Up</a>
+    <a class="card" href="/sword/defense">🦾 Defensive Tactics</a>
+    <a class="card" href="/sword/advanced">🧬 Advanced Techniques</a>
+    <a class="card" href="/sword/playstyle">🏅 Playstyle</a>
+    <a class="card" href="/sword/sweeps">🪃 Advanced Sweeps</a>
+    <a class="card" href="/sword/skills">🌟 Skills</a>
+
+  </div>
+
+</div>
+
+{% include 'partials/footer.html' %}
+
+</body>
+</html>

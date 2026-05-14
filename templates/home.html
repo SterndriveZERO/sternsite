@@ -1,17 +1,31 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
-{% block content %}
+<body>
 
-<h1>Welcome</h1>
-<p>Select a category:</p>
+<header>
+  <h1>67site</h1>
+  <div class="header-actions">
+    {% include 'partials/top_nav.html' %}
+  </div>
+</header>
 
-<div class="grid">
+<div class="container landing">
 
-  <a href="/pvp" class="card">
-    <h2>PvP Guide</h2>
-    <p>Sword, Crystal, UHC, SMP</p>
+  <p class="landing-lead">A collection of cool guides i made for fun!</p>
+
+  <a class="card landing-card" href="{{ url_for('pvp') }}">
+    <h2>Minecraft PvP guide</h2>
+    <p>Beginner-Advanced techniques, combos, defense, and more</p>
   </a>
 
 </div>
 
-{% endblock %}
+{% include 'partials/footer.html' %}
+
+</body>
+</html>
