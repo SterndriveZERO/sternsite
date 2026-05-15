@@ -84,6 +84,52 @@ def sweeps():
 @app.route("/sword/skills")
 def skills():
     return render_template("sword/skills.html")
-    
+
+
+@app.route("/uhc")
+def uhc():
+    return render_template("uhc.html")
+
+
+@app.route("/uhc/basic-knowledge")
+def uhc_basic_knowledge():
+    return render_template("uhc/basic-knowledge.html")
+
+
+@app.route("/uhc/melee")
+def uhc_melee():
+    return render_template("uhc/melee.html")
+
+
+@app.route("/uhc/utilities")
+def uhc_utilities():
+    return render_template("uhc/utilities.html")
+
+
+@app.route("/uhc/gamesense")
+def uhc_gamesense():
+    return render_template("uhc/gamesense.html")
+
+
+@app.route("/uhc/shielding")
+def uhc_shielding():
+    return render_template("uhc/shielding.html")
+
+
+@app.route("/uhc/bowing")
+def uhc_bowing():
+    return render_template("uhc/bowing.html")
+
+
+@app.route("/uhc/settings")
+def uhc_settings():
+    return render_template("uhc/settings.html")
+
+
+@app.route("/uhc/uhcs")
+def uhc_uhcs():
+    return render_template("uhc/uhcs.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
